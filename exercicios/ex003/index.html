@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>iniciando dom</h1>
+    <p>aqui vai o resultado</p>
+    <p>apredendo a usa <strong>Dom</strong> é java script</p>
+    <div id="msg">clique é mim</div>
+    <script>
+        var a = document.body.getElementsByTagName('p')[0]
+        document.write("<strong>se liga " + a.innerText)
+    
+        var di = document.getElementById('msg').style.color = 'red'
+ 
+
+
+
+
+        var c = document.getElementsByTagName('h1')[0]
+        c.innerText = "Olá, Mundo"
+        c.style.background = 'blue'
+        c.style.color = 'white'
+        c.style.padding = '20px'
+        c.style.borderRadius = '15px'
+        c.style.width = '220px'
+
+        
+    </script>
+</body>
+
+</html>

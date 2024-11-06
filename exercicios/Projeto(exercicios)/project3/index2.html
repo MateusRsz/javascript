@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(250, 218, 179);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 2.7em;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.377);
+        }
+
+        main {
+            background-color: white;
+            margin: auto;
+            width: 550px;
+            height: 350px;
+            margin-top: 60px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px #0000002d;
+        }
+
+         
+    </style>
+</head>
+
+<body>
+    <h1>Tabuada</h1>
+    <main>
+        <label for="in1">Número:</label>
+        <input type="number" name="n1" id="in1">
+        <button  onclick="calc()">Gerar</button>
+
+        <div id="resultado">
+            <select id="seltab" size="10">
+                 <option>Digite um  valor:</option>
+            </select>
+        </div>
+    </main>
+    <script>
+        function calc() {
+
+          let num = parseInt(document.getElementById('in1').value)
+          let tab = document.getElementById('seltab')
+         tab.innerHTML = ''
+          
+
+         
+            for (var c=1; c<=10; c++) {
+                let item = document.createElement('option')//opção
+                item.text = `${num} x ${c} = ${num*c}`//texto que a opção vai receber
+                tab.appendChild(item)//anexação da opção ao select
+            }
+          
+
+
+        }
+    </script>
+</body>
+
+</html>

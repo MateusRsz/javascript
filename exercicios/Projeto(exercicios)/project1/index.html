@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loading()">
+    <h1>Hora do dia</h1>
+    <main>
+        <p>Agora são</p>
+        <div>
+            <img src="dia.png" alt="">
+        </div>
+        <p id="bom"></p>
+    </main>
+
+    <script>
+        function loading() {
+
+            var img = document.querySelector('img')
+            var txt = document.getElementsByTagName('p')[0]
+            var txt2 = document.getElementById('bom')
+            var a = new Date()
+            var hora = a.getHours()
+            txt.innerHTML = `Agora são ${hora} horas`
+
+            if (hora >= 0 && hora < 13) {
+                img.src = 'dia.png'
+                document.body.style.background = 'lightblue'
+                bom.innerHTML = 'Bom dia'
+
+            } else if (hora >= 13 && hora <= 17) {
+                img.src = 'tarde.png'
+                document.body.style.background = '#ffB900'
+                bom.innerHTML = 'Boa tarde'
+
+
+            } else if (hora >= 18 && hora <= 23) {
+                img.src = 'noite.png'
+                document.body.style.background = '#0C1321'
+                bom.innerHTML = 'Boa noite'
+
+            }
+        }   
+    </script>
+</body>
+
+</html>

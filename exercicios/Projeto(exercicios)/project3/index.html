@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #c04444;
+            color: white;
+        }
+
+        main {
+            background-color: white;
+            color: black;
+            width: 500px;
+            height: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px #0000007c;
+
+        }
+
+        main,
+        footer,
+        header {
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        header {
+            width: 340px;
+            margin-top: 20px;
+            font-size: 1.3em;
+        }
+
+        footer {
+            width: 200px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+
+    </header>
+    <main>
+        <label for="cx1">Início:</label>
+        <input type="number" name="in1" id="cx1"><br>
+        <label for="cx2">Fim:</label>
+        <input type="number" name="" id="cx2"><br>
+        <label for="cx3">Passo:</label>
+        <input type="number" name="" id="cx3"><br>
+        <input type="button" value="Contar" onclick="somar()">
+
+        <div id="res">
+            <p>Preparando contagem...</p>
+        </div>
+    </main>
+    <footer>
+        ₢Cursoem Video
+    </footer>
+
+    <script>
+        function somar() {
+            let cx1 = document.getElementById('input#cx1')
+            let cx2 = document.getElementById('input#cx2')
+            let cx3 = document.getElementById('input#cx3')
+            let res = document.getElementById('div#res')
+            var n1 = Number(cx1.value)
+            var n2 = Number(cx2.value)
+            var n3 = Number(cx3.value)
+             if (n1.value.length == 0 || n2.value.length == 0 || n3.value.length == 0) {
+                alert('Error')
+
+             } else {
+
+                res.innerHTML = 'Contadno...'
+             }
+        
+        }
+    </script>
+</body>
+
+</html>

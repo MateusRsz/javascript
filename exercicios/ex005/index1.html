@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background-color: rgb(29, 136, 224);
+        }
+        input#te{
+            width: 50px;
+            background-color: #ffffff;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>Calculador de multa</h1>
+    <label for="te">Velocidade:</label>
+    <input type="number" id="te" min="1" max="999">Km/h
+    <input type="button" value="Testar" onclick="cliq()" >
+    <div id="ee">
+
+    </div>
+    <script>
+        function cliq(){
+            var a = document.querySelector('input#te')
+            var h = Number(a.value)
+            var b = document.querySelector('div#ee')
+            if (h >= 55) { 
+                b.innerHTML = `<strong>Você foi multado sua velocidade é ${h}</strong>`
+            }else{
+                b.innerHTML = '<strong>dirija com segurança</strong>'
+            }
+        }
+    </script>
+ </body>
+ </html>
